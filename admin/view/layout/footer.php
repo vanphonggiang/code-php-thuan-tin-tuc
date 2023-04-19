@@ -1,0 +1,1 @@
+<footer>Copyright &copy; <a href="./"><?=__NAME__?></a> <?=date('Y')?></footer>

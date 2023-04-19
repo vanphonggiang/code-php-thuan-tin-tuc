@@ -1,0 +1,504 @@
+$nen:#e8eff4;
+$vien:#CCC;
+$link:#333;
+$trang:#FFF;
+$den:#000;
+$cam:#ee5922;
+$camhover:#c0392b;
+$xanhla:#009432;
+$xanhduong:#3498db;
+@media all and (min-width: 0)
+{
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		font-family: Arial;
+	}
+	//Header
+	header{
+		height: 60px;
+		display: flex;
+		border-bottom: 1px solid $vien;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10px;
+		background-color: $trang;
+		z-index: 9!important;
+		img{
+			height: 39px;
+			width: auto;
+		}
+		p{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		i{
+			color: $camhover;
+			font-size: 20px;
+			cursor: pointer;
+			&.icon-menu{
+				display: block;
+				margin: 0 0 0 20px;
+			}
+		}
+	}
+	//Content
+	aside{
+		background-color: $nen;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	//Nav
+	nav{
+		position: fixed!important;
+		top: 60;
+		left: -257px;
+		width: 257px;
+		height: calc(100vh - 60px);
+		z-index: 2;
+		transition: all .3s;
+		background-color: $trang;
+		border-right: 1px solid $vien;
+		overflow: auto;
+		overflow-x: hidden;
+		&.actived{
+			left: 0;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			background: $trang;
+			li{
+				&.child-one{
+					line-height: 2;
+					padding: 7px 0 0 0;
+					&>a{
+						text-transform: uppercase;
+						font-size: 16px;
+						i{
+							margin-right: 5px;
+							font-size: 16px;
+						}
+					}
+				}
+				&.child-one.border{
+					border-top: 1px solid $vien;
+				}
+				&.child-one.only{
+					padding-bottom: 5px;
+				}
+				a{
+					text-decoration: none;
+					color: $den;
+					&.toggle{
+						width: 100%;
+						display: block;
+						padding: 0 0.75em 5px 0.75em;
+						color: $cam;
+						font-weight: bold;
+						&:hover{
+							color: $camhover;
+						}
+					}
+					&.single{
+						padding: 0 0.75em;
+						color: $cam;
+						font-weight: bold;
+					}
+					&.actived{
+						color: blue;
+					}
+				}
+			}
+			ul{
+				padding: 0 0 5px 0.75em;;
+			}
+		}
+	}
+	//Main
+	main{
+		padding: 10px 0;
+		width: calc(100% - 20px);
+		//Bread
+		.bread{
+			border-bottom: 1px solid $vien;
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: $trang;
+			.left{
+				span{
+					text-transform: uppercase;
+					font-weight: bold;
+				}
+			}
+			.right{
+				display: flex;
+				.search{
+					position: relative;
+					input{
+						height: 35px;
+						border: 1px solid $vien;
+						border-radius: 3px;
+						outline: none;
+						padding: 0 10px;
+						font-family: Arial;
+						font-size: 15px;
+					}
+					ul{
+						position: absolute;
+						top: 36px;
+						left: 0;
+						width: 100%;
+						list-style: none;
+						background-color: $trang;
+						display: none;
+						li{
+							border-bottom: 1px solid $vien;
+							padding: 10px;
+							&:last-child{
+								border-bottom: none;
+							}
+							a{
+								text-decoration: none;
+								color: $den;
+							}
+						}
+					}
+				}
+				button{
+					background-color: $cam;
+					border: none;
+					padding: 9px 15px;
+					border-radius: 4px;
+					margin-left: 15px;
+					&:first-child{
+						margin-left: 0;
+					}
+					&:hover{
+						background-color: $camhover;
+					}
+					a{
+						text-decoration: none;
+						color: $trang;
+						font-weight: bold;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+		//List
+		table{
+			width: 100%;
+			border-spacing: 0px;
+			thead{
+				tr{
+					th{
+						border-bottom: 1px solid #000;
+						padding: 15px 10px;
+						background-color: #FFF;
+						&.left{
+							text-align: left;
+						}
+					}
+				}
+			}
+			tbody{
+				tr{
+					&:nth-child(2n+1){
+						background:#f9f9f9;
+						border-bottom:1px solid #ddd;
+					}
+					&:nth-child(2n)
+					{
+						background-color: $trang;
+					}
+					&:last-child td{
+						border-bottom:1px solid #000;
+					}
+					&:hover{
+						background-color: #F6F7FB;
+					}
+					td{
+						border-bottom: 1px solid #ddd;
+						padding: 15px 10px;
+						&.giua{
+							text-align: center;
+						}
+						i{
+							font-size: 22px;
+							margin: 0 5px;
+							color: $cam;
+						}
+					}
+				}
+			}
+		}
+		//Page
+		.page{
+			margin: 20px 0 0 0;
+			ul{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				a{
+					color: $trang;
+					text-decoration: none;
+				}
+				li{
+					width: 35px;
+					height: 35px;
+					background-color: $xanhla;
+					margin: 0 5px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 3px;
+					color: $trang;
+					&.active{
+						background-color: $cam;
+					}
+					svg{
+						width: 15px;
+						height: 15px;
+					}
+				}
+			}
+		}
+		// Tabs
+		ul.tab{
+			overflow: hidden;
+			margin: 0px;
+			padding: 20px 10px 0 10px;
+			list-style: none;
+			position: sticky;
+			top: 60px;
+			background-color: $trang;
+			li{
+				float: left;
+				list-style: none;
+				padding: 10px;
+				background-color: #130f40;
+				border-radius: 4px 4px 0px 0px;
+				margin-right: 5px;
+				&.active{
+					background: #009432;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+				a{
+					color: #fff;
+					text-transform: uppercase;
+					text-decoration: none;
+					font-weight: bold;
+				}
+			}
+		}
+		.tab-content{
+			background-color: $trang;
+			padding: 10px;
+			.tab-item{
+			    display: none;
+			}
+		}
+		//Add edit form
+		form{
+			&.no-tab{
+				background-color: $trang;
+				padding: 15px 10px;
+			}
+			p{
+				&.tit{
+					color: $xanhduong;
+					font-weight: bold;
+					span{
+						&.slug{
+							background-color: $xanhla;
+							padding: 5px;
+							color: $trang;
+							font-size: 13px;
+							font-weight: normal;
+							border-radius: 3px;
+							cursor: pointer;
+							display: none;
+						}
+					}
+				}
+			}
+			input{
+				outline: none;
+				border: 1px solid $vien;
+				border-radius: 3px;
+				font-family: Arial;
+				font-size: 15px;
+				padding: 10px;
+				margin: 5px 0 20px 0;
+				&[type="submit"]{
+					background-color: $xanhla;
+					color: $trang;
+					text-transform: uppercase;
+					font-family: Arial;
+					font-size: 15px;
+					font-weight: bold;
+				}
+				&.mot{
+					width: 100%;
+				}
+				&.hai{
+					width: 100%;
+				}
+				&.ba{
+					width: 100%;
+				}
+				&.bon{
+					width: 100%;
+				}
+				&.nam{
+					width: 100%;
+				}
+				&.sau{
+					width: 100%;
+				}
+				&.bay{
+					width: 100%;
+				}
+				&.tam{
+					width: 100%;
+				}
+				&.chin{
+					width: 100%;
+				}
+				&.full{
+					width: 100%;
+				}
+			}
+			select{
+				height: 35px;
+				margin: 5px 0 20px 0;
+				font-family: Arial;
+				font-size: 15px;
+			}
+			textarea{
+				padding: 10px;
+				font-family: Arial;
+				font-size: 15px;
+				width: 100%;
+				resize: none;
+				outline: none;
+				border: 1px solid $vien;
+				border-radius: 3px;
+				margin: 5px 0 20px 0;
+			}
+		}
+		//Footer
+		footer{
+			height: 30px;
+			justify-content: center;
+			align-items: flex-end;
+			display: flex;
+			font-size: 15px;
+			a{
+				text-decoration: none;
+				color: $cam;
+				font-weight: bold;
+				margin: 0 5px;
+			}
+		}
+	}
+	//Loading
+	.loading{
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(1,1,1,.5);
+		img{
+			width: 179px;
+			height: auto;
+		}
+	}
+}
+@media all and (min-width: 996px)
+{
+	//Header
+	header{
+		i{
+			&.icon-menu{
+				display: none;
+			}
+		}
+	}
+	//Content
+	aside{
+		justify-content: flex-end;
+	}
+	//Nav
+	nav{
+		left: 0;
+		position: fixed!important;
+		height: calc(100vh - 60px);
+		ul{
+			position: sticky;
+			top: 0;
+			left: 0;
+		}
+	}
+	//Main
+	main{
+		width: calc(100% - 257px);
+		padding: 10px;
+		.bread{
+			.right{
+				.search{
+					input{
+						width: 300px;
+					}
+				}
+			}
+		}
+		//Form
+		form{
+			input{
+				&.mot{
+					width: 100px;
+				}
+				&.hai{
+					width: 200px;
+				}
+				&.ba{
+					width: 300px;
+				}
+				&.bon{
+					width: 400px;
+				}
+				&.nam{
+					width: 500px;
+				}
+				&.sau{
+					width: 600px;
+				}
+				&.bay{
+					width: 700px;
+				}
+				&.tam{
+					width: 800px;
+				}
+				&.chin{
+					width: 900px;
+				}
+			}
+		}
+	}
+}
