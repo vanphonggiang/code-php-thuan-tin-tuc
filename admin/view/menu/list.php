@@ -38,8 +38,8 @@ $data = $menu->DanhSach($query);
 	 			?>
 				<tr>
 		            <td class="giua">1</td>
-		            <td class=""><?=$value->ten?></a></td>
-		            <td class="giua"><a href="menu/edit?id=1&page=1"><i class="fas fa-pencil"></i></a></td>
+		            <td><?=$value->ten?></a></td>
+		            <td class="giua"><a href="menu/edit?id=<?=$value->id?>&page=1"><i class="fas fa-pencil"></i></a></td>
 		            <td class="giua"><a onClick="return confirm('Bạn có chắc chắn muốn xóa ?')" href="menu/del?id=1&page=1"><i class="fal fa-trash-alt"></i></a></td>
 		        </tr>
 		    <?php } ?>

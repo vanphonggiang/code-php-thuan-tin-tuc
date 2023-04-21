@@ -6,3 +6,5 @@ Website tin tức bằng code PHP thuần
 [Danh sách menu](https://codethuan.com/danh-sach-menu-website-tin-tuc)
 
 [Thêm mới menu](https://codethuan.com/them-moi-menu-code-php-thuan)
+
+[Cập nhật menu](https://codethuan.com/cap-nhat-menu-code-thuan-php)

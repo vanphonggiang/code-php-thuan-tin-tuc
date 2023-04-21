@@ -1,20 +1,7 @@
 <?php
 if(isset($_POST['add']))
 {
-	if($_POST['base64Image'] != '')
-	{
-		$hinh = $_POST['slug'].".jpg";
-		file_put_contents('../uploads/menu/'.$hinh, file_get_contents($_POST['base64Image']));
-	}
-	else
-	{
-		$hinh = NULL;
-	}
-	$ten = $_POST['ten'];
-	$slug = $_POST['slug'];
-	$des = $_POST['des'];
-	$query->ThemMoi("menu", ["ten", "slug", "des", "hinh"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh]);
-	header("location:./");
+	$menu -> ThemMoi($query);
 }
 ?>
 <!-- Css files-->
