@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2023 at 04:23 PM
+-- Generation Time: Apr 22, 2023 at 05:11 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,6 +44,58 @@ CREATE TABLE `info` (
   `id` int(11) NOT NULL,
   `ten` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu`
+--
+
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
+  `ten` text DEFAULT NULL,
+  `slug` text DEFAULT NULL,
+  `des` text DEFAULT NULL,
+  `hinh` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`id`, `ten`, `slug`, `des`, `hinh`) VALUES
+(1, 'lap trinh', 'lap-trinh', 'Lap trinh code thuan php', 'a.jpg'),
+(2, 'b', 'b', 'b', NULL),
+(3, 'c', 'c', 'c', 'c.jpg'),
+(4, 'final', 'final', 'final', 'final.jpg'),
+(5, 'n', 'n', 'n', 'n.jpg'),
+(6, 'h', 'h', 'h', 'h.jpg'),
+(7, 'g12', 'ga', 'g', 'ga.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sanpham`
+--
+
+CREATE TABLE `sanpham` (
+  `id` int(11) NOT NULL,
+  `ten` text DEFAULT NULL,
+  `ma` text DEFAULT NULL,
+  `gia` int(11) DEFAULT NULL,
+  `qr` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `sanpham`
+--
+
+INSERT INTO `sanpham` (`id`, `ten`, `ma`, `gia`, `qr`) VALUES
+(1, 'a', 'a', 10000, 'a.png'),
+(2, 'b', 'b', 3, 'b.png'),
+(3, 'd', 'd', 3, 'd.png'),
+(4, 'f', 'f', 45, 'f.png'),
+(5, 'codethuan', 'codethuan', 10, 'codethuan.png');
 
 -- --------------------------------------------------------
 
@@ -119,6 +171,18 @@ ALTER TABLE `info`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sanpham`
+--
+ALTER TABLE `sanpham`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `thanhvien`
 --
 ALTER TABLE `thanhvien`
@@ -145,6 +209,18 @@ ALTER TABLE `import`
 --
 ALTER TABLE `info`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `sanpham`
+--
+ALTER TABLE `sanpham`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `thanhvien`

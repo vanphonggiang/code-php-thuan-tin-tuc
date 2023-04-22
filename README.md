@@ -8,3 +8,5 @@ Website tin tức bằng code PHP thuần
 [Thêm mới menu](https://codethuan.com/them-moi-menu-code-php-thuan)
 
 [Cập nhật menu](https://codethuan.com/cap-nhat-menu-code-thuan-php)
+
+[Code PHP tạo QR Code Sản Phẩm](https://codethuan.com/code-php-tao-qr-code-ung-dung-trong-dat-hang)
