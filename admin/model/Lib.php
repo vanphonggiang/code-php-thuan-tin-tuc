@@ -120,7 +120,7 @@ class Lib{
 	{
 		if ($total_page > 1 )
 		{
-			$range = 3;
+			$range = 5;
 			$range_min = ($range % 2 == 0) ? ($range / 2) - 1 : ($range - 1) / 2;
 			$range_max = ($range % 2 == 0) ? $range_min + 1 : $range_min;
 			$page_min = $page_num- $range_min;

@@ -25,8 +25,9 @@ class Menu {
 		header("location:./");
 	}
 
-	public function CapNhat($query, $id, $data)
+	public function CapNhat($query, $id, $data, $lib)
 	{
+		$pageCurrent = $lib->pageAddress();
 		if($_POST['base64Image'] != '')
 		{
 			// Xóa hình cũ
@@ -42,13 +43,20 @@ class Menu {
 		$slug = $_POST['slug'];
 		$des = $_POST['des'];
 		$query->CapNhat("menu", ["ten", "slug", "des", "hinh"], ["id"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "id" => $id]);
-		header("location:./");
+		header("location:../menu?page=".$pageCurrent);
 	}
 
 	public function ChiTiet($id, $truyvan)
 	{
 		$data = $truyvan->ChiTiet("menu", [], ["id" => "="], ["id" => $id]);
 		return $data;
+	}
+
+	public function Xoa($id, $lib, $truyvan)
+	{
+		$pageCurrent = $lib->pageAddress();
+		$truyvan->Xoa("menu", ["id" => "="], ["id" => $id]);
+		header("location:../menu?page=".$pageCurrent);
 	}
 }
 $menu = new Menu();

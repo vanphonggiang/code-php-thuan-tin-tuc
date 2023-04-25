@@ -1,9 +1,10 @@
 <?php
 	$idMenu = $lib->getID();
 	$data = $menu->ChiTiet($idMenu, $query);
+
 	if(isset($_POST['add']))
 	{
-		$menu->CapNhat($query, $idMenu, $data);
+		$menu->CapNhat($query, $idMenu, $data, $lib);
 	}
 ?>
 <!-- Css files-->

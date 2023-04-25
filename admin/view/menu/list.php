@@ -1,5 +1,7 @@
 <?php
-$data = $menu->DanhSach($query);
+	$data = $menu->DanhSach($query);
+	$pageGet = $lib->pageAddress();
+	$processPage = $lib->ConfigPage($pageGet, $data, 3);
 ?>
 <main>
 	<section class="blog">
@@ -32,18 +34,31 @@ $data = $menu->DanhSach($query);
 					<th colspan="2" width="10%">Chức năng</th>
 				</tr>
 			</thead>
-	 		<tbody>
-	 			<?php 
-	 			foreach ($data as $key => $value) {
-	 			?>
+			<tbody>
+				<?php
+				$thutu = 1;
+				foreach ($data as $key => $value) {
+					if( $key >= $processPage['start_page'] && $key < $processPage['end_page'] ){
+				?>
 				<tr>
-		            <td class="giua">1</td>
-		            <td><?=$value->ten?></a></td>
-		            <td class="giua"><a href="menu/edit?id=<?=$value->id?>&page=1"><i class="fas fa-pencil"></i></a></td>
-		            <td class="giua"><a onClick="return confirm('Bạn có chắc chắn muốn xóa ?')" href="menu/del?id=1&page=1"><i class="fal fa-trash-alt"></i></a></td>
-		        </tr>
-		    <?php } ?>
-	 		</tbody>
-	    </table>
+					<td class="giua"><?=$thutu?></td>
+					<td><?=$value->ten?></a></td>
+					<td class="giua"><a href="menu/edit?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fas fa-pencil"></i></a></td>
+					<td class="giua"><a onClick="return confirm('Bạn có chắc chắn muốn xóa ?')" href="menu/del?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fal fa-trash-alt"></i></a></td>
+				</tr>
+				<?php $thutu ++;} }?>
+			</tbody>
+		</table>
+
+		<?php
+		if($processPage['total_row'] > $processPage['num_of_page'])
+		{
+			echo '<div class="page">';
+				echo '<ul>';
+					echo $lib->PhanTrang($p.'?', $processPage['total_page'], $processPage['page']);
+				echo '</ul>';
+			echo '</div>';
+		}
+		?>
 	</section>
 </main>
