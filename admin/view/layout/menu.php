@@ -19,7 +19,6 @@
 			</a>
 			<ul>
 				<li><a href="menu">Menu</a></li>
-				<li><a href="loai">Loại</a></li>
 				<li><a href="tin">Tin</a></li>
 			</ul>
 		</li>

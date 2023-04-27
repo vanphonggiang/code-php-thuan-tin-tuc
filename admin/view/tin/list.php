@@ -1,5 +1,5 @@
 <?php
-	$data = $menu->DanhSach($query);
+	$data = $tin->DanhSach($query);
 	$pageGet = $lib->pageAddress();
 	$processPage = $lib->ConfigPage($pageGet, $data, 3);
 ?>
@@ -7,7 +7,7 @@
 	<section class="blog">
 		<div class="bread">
 			<div class="left">
-				<span>Menu</span>
+				<span>Tin tức</span>
 				<span class="ngan"> | </span>
 				<span>danh sách</span>
 			</div>
@@ -22,7 +22,7 @@
 						<li><a href="">Chao</a></li>
 					</ul>
 				</div>
-				<button><a href="menu/add">Thêm mới</a></button>
+				<button><a href="tin/add">Thêm mới</a></button>
 			</div>
 		</div>
 
@@ -43,8 +43,8 @@
 				<tr>
 					<td class="giua"><?=$thutu?></td>
 					<td><?=$value->ten?></a></td>
-					<td class="giua"><a href="menu/edit?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fas fa-pencil"></i></a></td>
-					<td class="giua"><a onClick="return confirm('Bạn có chắc chắn muốn xóa ?')" href="menu/del?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fal fa-trash-alt"></i></a></td>
+					<td class="giua"><a href="tin/edit?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fas fa-pencil"></i></a></td>
+					<td class="giua"><a onClick="return confirm('Bạn có chắc chắn muốn xóa ?')" href="tin/del?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fal fa-trash-alt"></i></a></td>
 				</tr>
 				<?php $thutu ++;} }?>
 			</tbody>
