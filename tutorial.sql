@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2023 at 03:35 PM
+-- Generation Time: Apr 28, 2023 at 03:12 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -67,6 +67,25 @@ INSERT INTO `menu` (`id`, `ten`, `slug`, `des`, `hinh`) VALUES
 (1, 'PHP', 'php', 'Lập trình PHP', 'php.jpg'),
 (2, 'HTML', 'html', 'HTML', 'html.jpg'),
 (3, 'CSS', 'css', 'CSS', 'css.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nhom`
+--
+
+CREATE TABLE `nhom` (
+  `id` int(11) NOT NULL,
+  `ten` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `nhom`
+--
+
+INSERT INTO `nhom` (`id`, `ten`) VALUES
+(1, 'Amin'),
+(2, 'Khách');
 
 -- --------------------------------------------------------
 
@@ -169,6 +188,12 @@ ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `nhom`
+--
+ALTER TABLE `nhom`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sanpham`
 --
 ALTER TABLE `sanpham`
@@ -207,6 +232,12 @@ ALTER TABLE `info`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `nhom`
+--
+ALTER TABLE `nhom`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sanpham`

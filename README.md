@@ -14,3 +14,5 @@ Website tin tức bằng code PHP thuần
 [Phân trang menu và xóa menu](https://codethuan.com/phan-trang-menu-va-xoa-menu)
 
 [Quản trị tin web Code Thuần](https://codethuan.com/quan-tri-tin-tuc-web-code-thuan-php)
+
+[Quản trị thêm mới nhóm thành viên](https://codethuan.com/ajax-cap-nhat-nhom-thanh-vien-php-mysql)
