@@ -1,12 +1,13 @@
-<?php
+<?php 
     if(isset($_POST['id']))
     {
         require_once "../../model/Query.php";
         $query = new Query();
-        $data = $query->ChiTiet("nhom", [], ["id" => "="], ["id" => $_POST['id']]);
+        $query->CapNhat("nhom", ["ten"], ["id"], ["id" => $_POST['id'], "ten" => $_POST['ten']]);
         echo json_encode([
             "status" => "success",
-            "nhom" => $data
+            "ten" => $_POST['ten'],
+            "id" => $_POST['id']
         ]);
     }
     else
@@ -15,4 +16,4 @@
             "status" => "fail"
         ]);
     }
-?>
+ ?>

@@ -16,3 +16,5 @@ Website tin tức bằng code PHP thuần
 [Quản trị tin web Code Thuần](https://codethuan.com/quan-tri-tin-tuc-web-code-thuan-php)
 
 [Quản trị thêm mới nhóm thành viên](https://codethuan.com/ajax-cap-nhat-nhom-thanh-vien-php-mysql)
+
+[Quản trị cập nhật nhóm thành viên](https://codethuan.com/sua-nhom-thanh-vien-bang-ajax-php-va-mysql)
