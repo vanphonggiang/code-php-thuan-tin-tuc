@@ -465,7 +465,7 @@ $xanhduong:#3498db;
 				padding: 10px 0;
 				color: $xanhla;
 			}
-			input[type="text"]{
+			input[type="text"], input[type="password"]{
 				width: 300px;
 				height: 35px;
 				border: 1px solid $vien;

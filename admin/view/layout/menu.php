@@ -30,7 +30,7 @@
 			</a>
 			<ul>
 				<li><a href="nhom">Nhóm</a></li>
-				<li><a href="thanh-vien">Thành viên</a></li>
+				<li><a href="user">Thành viên</a></li>
 			</ul>
 		</li>
 
