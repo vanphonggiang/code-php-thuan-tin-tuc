@@ -3,10 +3,10 @@
     {
         require_once "../../model/Query.php";
         $query = new Query();
-        $query->CapNhat("nhom", ["ten"], ["id"], ["id" => $_POST['id'], "ten" => $_POST['ten']]);
+        $query->CapNhat("thanhvien", ["fullname", "nhom"], ["id"], ["id" => $_POST['id'], "fullname" => $_POST['fullname'], "nhom" => $_POST['nhom']]);
         echo json_encode([
             "status" => "success",
-            "ten" => $_POST['ten'],
+            "fullname" => $_POST['fullname'],
             "id" => $_POST['id']
         ]);
     }

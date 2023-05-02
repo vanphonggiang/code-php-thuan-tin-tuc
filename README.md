@@ -20,3 +20,5 @@ Website tin tức bằng code PHP thuần
 [Quản trị cập nhật nhóm thành viên](https://codethuan.com/sua-nhom-thanh-vien-bang-ajax-php-va-mysql)
 
 [Danh sách thành viên](https://codethuan.com/danh-sach-thanh-vien-va-form-them-moi-thanh-vien)
+
+[Thêm mới và cập nhật thành viên](https://codethuan.com/them-moi-thanh-vien-va-cap-nhat-thanh-vien)

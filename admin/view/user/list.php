@@ -34,7 +34,7 @@
 						<td class="giua"><?=$stt?></td>
 						<td class="user-<?=$value->id?>"><?=$value->user?></td>
 						<td class="fullname-<?=$value->id?>"><?=$value->fullname?></td>
-						<td class="giua edit-<?=$value->id?>"><i class="edit-nhom fa-regular fa-pen-to-square" data=<?=$value->id?>></i></td>
+						<td class="giua edit-<?=$value->id?>"><i class="edit-user fa-regular fa-pen-to-square" data=<?=$value->id?>></i></td>
 					</tr>
 					<?php 
 					$stt++;
@@ -86,53 +86,87 @@
 	});
 
 	$(document).on('click', 'input[name="add"]', function(){
-		let ten = $('input[name="ten"]').val();
-		if(ten != '')
+		let user = $('input[name="user"]').val();
+		let pass = $('input[name="pass"]').val();
+		let fullname = $('input[name="fullname"]').val();
+		let nhom = parseInt($('select').val());
+		if(user != '')
 		{
-			$.ajax({
-				method : "POST",
-				data: {ten:ten},
-				url: "view/nhom/add.php",
-				success:function(dulieu)
+			if(pass == '')
+			{
+				Swal.fire({
+					icon: 'error',
+					text: 'Password không được để trống'
+				});
+			}
+			else
+			{
+				if(fullname == '')
 				{
-					let info = JSON.parse(dulieu);
-					if(info.status == "fail")
+					Swal.fire({
+						icon: 'error',
+						text: 'Tên không được để trống'
+					});
+				}
+				else
+				{
+					if(nhom == 0)
 					{
 						Swal.fire({
 							icon: 'error',
-							text: 'Tên là bắt buộc'
+							text: 'Nhóm thành viên là bắt buộc'
 						});
 					}
 					else
 					{
-						$("tbody").append(`
-							<tr>
-								<td class="giua">${info.total}</td>
-								<td class="ten-${info.id}">${ten}</td>
-								<td class="giua edit-${info.id}"><i class="edit-nhom fa-regular fa-pen-to-square" data=${info.id}></i></td>
-							</tr>
-						`);
-						$(".popup").css("display", "none");
-						$(".popup").html('');
+						$.ajax({
+							method : "POST",
+							data: {user:user, pass:pass, fullname:fullname, nhom:nhom},
+							url: "view/user/add.php",
+							success:function(dulieu)
+							{
+								let info = JSON.parse(dulieu);
+								if(info.status == "fail")
+								{
+									Swal.fire({
+										icon: 'error',
+										text: info.mess
+									});
+								}
+								else
+								{
+									$("tbody").append(`
+										<tr>
+											<td class="giua">${info.total}</td>
+											<td class="user-${info.id}">${user}</td>
+											<td class="fullname-${info.id}">${fullname}</td>
+											<td class="giua edit-${info.id}"><i class="edit-user fa-regular fa-pen-to-square" data=${info.id}></i></td>
+										</tr>
+									`);
+									$(".popup").css("display", "none");
+									$(".popup").html('');
+								}
+							}
+						});
 					}
 				}
-			});
+			}
 		}
 		else
 		{
 			Swal.fire({
 				icon: 'error',
-				text: 'Tên là bắt buộc'
+				text: 'User là bắt buộc'
 			});
 		}
 	});
 
-	$(document).on("click", ".edit-nhom", function(){
+	$(document).on("click", ".edit-user", function(){
 		let id = parseInt($(this).attr("data"));
 		$.ajax({
 			method: "POST",
 			data:{id:id},
-			url: "view/nhom/edit.php",
+			url: "view/user/edit.php",
 			success:function(dulieu)
 			{
 				let info = JSON.parse(dulieu);
@@ -145,18 +179,7 @@
 				}
 				else
 				{
-					$(".popup").html(`
-						<div class="center">
-							<span class="close"><i class="fa-solid fa-circle-xmark"></i></span>
-							<h2>Cập nhật</h2>
-							
-							<p><b>Tên</b></p>
-							<input type="text" name="ten" placeholder="Ngày" autocomplete="off" spellcheck="false" value="${info.nhom.ten}" />
-
-							<p></p>
-							<input type="button" name="edit" value="Sửa" data=${info.nhom.id} />
-						</div>
-					`);
+					$(".popup").html(info.thanhvien);
 					$(".popup").css("display", "flex");
 				}
 			}
@@ -165,11 +188,12 @@
 
 	$(document).on("click", 'input[name=edit]', function(){
 		let id = parseInt($(this).attr("data"));
-		let ten = $('input[name=ten]').val();
+		let fullname = $('input[name="fullname"]').val();
+		let nhom = parseInt($('select').val());
 		$.ajax({
 			method: "POST",
-			data:{id:id, ten:ten},
-			url: "view/nhom/edit-save.php",
+			data:{id:id, fullname:fullname, nhom:nhom},
+			url: "view/user/edit-save.php",
 			success:function(dulieu)
 			{
 				let info = JSON.parse(dulieu);
@@ -182,7 +206,7 @@
 				}
 				else
 				{
-					$(".ten-"+info.id).html(info.ten);
+					$(".fullname-"+info.id).html(info.fullname);
 					$(".popup").css("display", "none");
 					$(".popup").html('');
 				}
