@@ -22,6 +22,7 @@ class Menu {
 		$slug = $_POST['slug'];
 		$des = $_POST['des'];
 		$query->ThemMoi("menu", ["ten", "slug", "des", "hinh"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh]);
+		$this->Info($query);
 		header("location:./");
 	}
 
@@ -43,6 +44,7 @@ class Menu {
 		$slug = $_POST['slug'];
 		$des = $_POST['des'];
 		$query->CapNhat("menu", ["ten", "slug", "des", "hinh"], ["id"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "id" => $id]);
+		$this->Info($query);
 		header("location:../menu?page=".$pageCurrent);
 	}
 
@@ -56,7 +58,18 @@ class Menu {
 	{
 		$pageCurrent = $lib->pageAddress();
 		$truyvan->Xoa("menu", ["id" => "="], ["id" => $id]);
+		$this->Info($truyvan);
 		header("location:../menu?page=".$pageCurrent);
+	}
+
+	public function Info($truyvan)
+	{
+		$data = $truyvan->DanhSach("menu");
+		$arrMenu = [];
+		foreach ($data as $key => $value) {
+			$arrMenu[$value->slug] = $value;
+		}
+		$truyvan->CapNhat("info", ["menu"], ["id"], ["id" => 1, "menu" => json_encode($arrMenu)]);
 	}
 }
 $menu = new Menu();

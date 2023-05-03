@@ -27,7 +27,13 @@
 	}
 	require_once "admin/model/Query.php";
 	$query = new Query();
-	$arrMenu = json_decode('[]');
+	$dataInfo = $query->ChiTiet("info", [], ["id" => "="], ["id" => 1]);
+
+	$arrMenu = json_decode($dataInfo->menu);
+	echo "<pre>";
+	print_r($arrMenu);
+	echo "</pre>";
+	
 	$arrLoai = json_encode('[]');
 	if($p == ''){
 		$folder = 'home';

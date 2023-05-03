@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2023 at 03:12 PM
+-- Generation Time: May 03, 2023 at 04:07 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -24,26 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `import`
---
-
-CREATE TABLE `import` (
-  `id` int(11) NOT NULL,
-  `ten` text NOT NULL,
-  `ngay` text NOT NULL,
-  `nguoi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `info`
 --
 
 CREATE TABLE `info` (
   `id` int(11) NOT NULL,
-  `ten` text NOT NULL
+  `title` text DEFAULT NULL,
+  `des` text DEFAULT NULL,
+  `menu` text DEFAULT NULL,
+  `tin` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `info`
+--
+
+INSERT INTO `info` (`id`, `title`, `des`, `menu`, `tin`) VALUES
+(1, 'Code thuần PHP', 'Lập trình PHP web tin tức bằng code thuần', '{\"php\":{\"id\":\"1\",\"ten\":\"PHP\",\"slug\":\"php\",\"des\":\"L\\u1eadp tr\\u00ecnh PHP\",\"hinh\":\"php.jpg\"},\"html\":{\"id\":\"2\",\"ten\":\"HTML\",\"slug\":\"html\",\"des\":\"HTML\",\"hinh\":\"html.jpg\"},\"css\":{\"id\":\"3\",\"ten\":\"CSS\",\"slug\":\"css\",\"des\":\"CSS\",\"hinh\":\"css.jpg\"},\"jquery\":{\"id\":\"4\",\"ten\":\"jQuery\",\"slug\":\"jquery\",\"des\":\"Th\\u01b0 vi\\u1ec7n jQuery javascript\",\"hinh\":\"jquery.jpg\"}}', '[{\"slug\":\"tin-1\",\"hinh\":\"tin-1.jpg\",\"ten\":\"Tin 1 update final\",\"des\":\"dsds\"},{\"slug\":\"lo-hong-bao-mat-ngon-ngu-lap-trinh-php\",\"hinh\":\"lo-hong-bao-mat-ngon-ngu-lap-trinh-php.jpg\",\"ten\":\"L\\u1ed7 h\\u1ed5ng b\\u1ea3o m\\u1eadt ng\\u00f4n ng\\u1eef l\\u1eadp tr\\u00ecnh PHP\",\"des\":\"Th\\u01b0\\u1eddng xuy\\u00ean c\\u1eadp nh\\u1eadt phi\\u00ean b\\u1ea3n PHP m\\u1edbi nh\\u1ea5t v\\u00e0 c\\u00e1c th\\u01b0 vi\\u1ec7n c\\u1ee7a n\\u00f3 \\u0111\\u1ec3 gi\\u1ea3m thi\\u1ec3u c\\u00e1c l\\u1ed7 h\\u1ed5ng b\\u1ea3o m\\u1eadt c\\u00f3 th\\u1ec3 x\\u1ea3y ra khi x\\u00e2y d\\u1ef1ng website b\\u1eb1ng ng\\u00f4n ng\\u1eef PHP\"},{\"slug\":\"quy-trinh-phat-trien-website-bang-ngon-ngu-php\",\"hinh\":\"quy-trinh-phat-trien-website-bang-ngon-ngu-php-1679673346.jpg\",\"ten\":\"Quy tr\\u00ecnh ph\\u00e1t tri\\u1ec3n website b\\u1eb1ng ng\\u00f4n ng\\u1eef PHP\",\"des\":\"PHP l\\u00e0 m\\u1ed9t ng\\u00f4n ng\\u1eef l\\u1eadp tr\\u00ecnh ph\\u00eda Server d\\u00f9ng \\u0111\\u1ec3 x\\u00e2y d\\u1ef1ng c\\u00e1c \\u1ee9ng d\\u1ee5ng Website. \\u0110i\\u1ec3m m\\u1ea1nh c\\u1ee7a PHP l\\u00e0 t\\u00ednh c\\u1ed9ng \\u0111\\u1ed3ng c\\u1ee7a n\\u00f3 cao\"},{\"slug\":\"the-moi-trong-html5\",\"hinh\":\"the-moi-trong-html5.jpg\",\"ten\":\"Th\\u1ebb m\\u1edbi trong HTML5\",\"des\":\"HTML5 gi\\u00fap media v\\u00e0 vector tr\\u00ean website \\u0111\\u01b0\\u1ee3c x\\u1eed l\\u00fd v\\u00e0 th\\u1ef1c hi\\u1ec7n d\\u1ec5 d\\u00e0ng h\\u01a1n, nhanh h\\u01a1n m\\u00e0 ko c\\u1ea7n ph\\u1ea3i b\\u1ed5 sung b\\u1ea5t k\\u00ec ph\\u1ea7n m\\u1ec1m li\\u00ean quan ho\\u1eb7c th\\u01b0 vi\\u1ec7n API n\\u00e0o kh\\u00e1c\"},{\"slug\":\"chinh-sach-quy-dinh-chung\",\"hinh\":\"chinh-sach-quy-dinh-chung.jpg\",\"ten\":\"Ch\\u00ednh s\\u00e1ch quy \\u0111\\u1ecbnh chung\",\"des\":\"Quy \\u0111\\u1ecbnh v\\u1ec1 s\\u1eed d\\u1ee5ng t\\u00e0i kho\\u1ea3n, t\\u00e0i nguy\\u00ean t\\u1ea1i website codethuan.com\"},{\"slug\":\"dieu-khoan-su-dung-website-code-thuan\",\"hinh\":\"dieu-khoan-su-dung-website-code-thuan.jpg\",\"ten\":\"\\u0110i\\u1ec1u kho\\u1ea3n s\\u1eed d\\u1ee5ng website Code Thu\\u1ea7n\",\"des\":\"\\u0110i\\u1ec1u kho\\u1ea3n s\\u1eed d\\u1ee5ng tr\\u00ean website codethuan.com g\\u1ed3m chia s\\u1ebb b\\u00e0i vi\\u1ebft, b\\u00ecnh lu\\u1eadn\"},{\"slug\":\"chinh-sach-bao-mat-thong-tin\",\"hinh\":\"chinh-sach-bao-mat-thong-tin-1679665966.jpg\",\"ten\":\"Ch\\u00ednh s\\u00e1ch b\\u1ea3o m\\u1eadt th\\u00f4ng tin\",\"des\":\"Quy \\u0111\\u1ecbnh v\\u1ec1 vi\\u1ec7c s\\u1eed d\\u1ee5ng th\\u00f4ng tin, l\\u01b0u tr\\u1eef th\\u00f4ng tin t\\u1ea1i website codethuan.com\"},{\"slug\":\"su-khac-biet-html-va-html5\",\"hinh\":\"su-khac-biet-html-va-html5.jpg\",\"ten\":\"S\\u1ef1 kh\\u00e1c bi\\u1ec7t HTML v\\u00e0 HTML5\",\"des\":\"HTML5 l\\u00e0 m\\u1ed9t ng\\u00f4n ng\\u1eef l\\u1eadp tr\\u00ecnh \\u0111\\u01b0\\u1ee3c ph\\u00e1t tri\\u1ec3n tr\\u00ean n\\u1ec1n t\\u1ea3ng ng\\u00f4n ng\\u1eef HTML v\\u00e0 quan tr\\u1ecdng nh\\u1ea5t c\\u1ee7a World Wide Web. N\\u00f3 \\u0111\\u01b0\\u1ee3c s\\u1eed d\\u1ee5ng \\u0111\\u1ec3 thi\\u1ebft k\\u1ebf v\\u00e0 c\\u1ea5u tr\\u00fac c\\u00e1c website, h\\u1ed7 tr\\u1ee3 cho \\u0111a ph\\u01b0\\u01a1ng ti\\u1ec7n t\\u1ed1i \\u0111a nh\\u01b0ng v\\u1eabn gi\\u00fap cho website th\\u00e2n thi\\u1ec7n v\\u1edbi m\\u1ecdi ng\\u01b0\\u1eddi d\\u00f9ng v\\u00e0 m\\u1ecdi thi\\u1ebft b\\u1ecb, c\\u00e1c ch\\u01b0\\u01a1ng tr\\u00ecnh m\\u00e1y t\\u00ednh, tr\\u00ecnh duy\\u1ec7t web\"},{\"slug\":\"danh-sach-dien-thoai-redmi-update-android-13\",\"hinh\":\"danh-sach-dien-thoai-redmi-update-android-13-1679664328.jpg\",\"ten\":\"Danh s\\u00e1ch \\u0111i\\u1ec7n tho\\u1ea1i Redmi update Android 13\",\"des\":\"Ng\\u01b0\\u1eddi ta cho r\\u1eb1ng Redmi Note 8 2021 s\\u1ebd kh\\u00f4ng nh\\u1eadn \\u0111\\u01b0\\u1ee3c b\\u1ea3n c\\u1eadp nh\\u1eadt Android 13. Tuy nhi\\u00ean, Android 13 \\u0111\\u00e3 b\\u1eaft \\u0111\\u1ea7u \\u0111\\u01b0\\u1ee3c th\\u1eed nghi\\u1ec7m n\\u1ed9i b\\u1ed9 tr\\u00ean model n\\u00e0y\"},{\"slug\":\"gioi-thieu-code-thuan\",\"hinh\":\"gioi-thieu-code-thuan.jpg\",\"ten\":\"Gi\\u1edbi thi\\u1ec7u Code Thu\\u1ea7n\",\"des\":\"Code Thu\\u1ea7n website chia s\\u1ebb kinh nghi\\u1ec7m l\\u1eadp tr\\u00ecnh web PHP\"}]');
 
 -- --------------------------------------------------------
 
@@ -66,7 +63,8 @@ CREATE TABLE `menu` (
 INSERT INTO `menu` (`id`, `ten`, `slug`, `des`, `hinh`) VALUES
 (1, 'PHP', 'php', 'Lập trình PHP', 'php.jpg'),
 (2, 'HTML', 'html', 'HTML', 'html.jpg'),
-(3, 'CSS', 'css', 'CSS', 'css.jpg');
+(3, 'CSS', 'css', 'CSS', 'css.jpg'),
+(4, 'jQuery', 'jquery', 'Thư viện jQuery javascript', 'jquery.jpg');
 
 -- --------------------------------------------------------
 
@@ -85,7 +83,10 @@ CREATE TABLE `nhom` (
 
 INSERT INTO `nhom` (`id`, `ten`) VALUES
 (1, 'Amin'),
-(2, 'Khách');
+(2, 'Khách'),
+(3, 'Super admin'),
+(4, 'Kế toán toan'),
+(5, 'Nhân sự');
 
 -- --------------------------------------------------------
 
@@ -131,7 +132,8 @@ CREATE TABLE `thanhvien` (
 --
 
 INSERT INTO `thanhvien` (`id`, `user`, `pass`, `nhom`, `fullname`) VALUES
-(1, 'codethuan', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'Code Thuần');
+(1, 'codethuan', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'Code Thuần'),
+(2, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -163,17 +165,11 @@ INSERT INTO `tin` (`id`, `ten`, `hinh`, `slug`, `menu`, `des`, `noidung`) VALUES
 (7, 'Thẻ mới trong HTML5', 'the-moi-trong-html5.jpg', 'the-moi-trong-html5', 1, 'HTML5 giúp media và vector trên website được xử lý và thực hiện dễ dàng hơn, nhanh hơn mà ko cần phải bổ sung bất kì phần mềm liên quan hoặc thư viện API nào khác', '<h2>Thẻ mới HTML5</h2>\r\n\r\n<p>&lt; article &gt; thẻ n&agrave;y định nghĩa một b&agrave;i viết hoặc b&igrave;nh luận của người d&ugrave;ng. N&oacute; độc lập với content của website.</p>\r\n\r\n<p>&lt; aside &gt; thẻ n&agrave;y đ&aacute;nh dấu nội dung b&ecirc;n cạnh của trang hiện tại. V&iacute; dụ như một slidebar.</p>\r\n\r\n<p>&lt; header &gt;&lt; footer &gt; hai thẻ n&agrave;y gi&uacute;p bạn kh&ocirc;ng cần định nghĩa id cho ti&ecirc;u đề v&agrave; cuối trang.</p>\r\n\r\n<p>&lt; nav &gt; thẻ n&agrave;y định nghĩa phần menu điều hướng cho website.</p>\r\n\r\n<p>&lt; section &gt; đ&acirc;y l&agrave; một thẻ quan trọng, n&oacute; gi&uacute;p bạn x&aacute;c định c&aacute;c th&agrave;nh phần kh&aacute;c nhau trong website. Bạn c&oacute; thể gộp chung c&aacute;c div c&ugrave;ng nội dung v&agrave;o trong thẻ n&agrave;y để dễ d&agrave;ng quản l&yacute;.</p>\r\n\r\n<p>&lt; audio &gt;&lt; video &gt; hai thẻ n&agrave;y gi&uacute;p bạn hiển thị một đoạn phim hoặc một b&agrave;i h&aacute;t tr&ecirc;n website đơn giản hơn rất nhiều.</p>\r\n\r\n<p>&lt; embed &gt; thẻ n&agrave;y x&aacute;c định một container c&aacute;c plugin tương t&aacute;c với ứng dụng b&ecirc;n ngo&agrave;i.</p>\r\n\r\n<p>&lt; canvas &gt; thẻ th&uacute; vị n&agrave;y cho ph&eacute;p bạn vẽ đồ họa m&agrave; kh&ocirc;ng cần phải qua bất k&igrave; đoạn m&atilde; hỗ trợ n&agrave;o (chủ yếu l&agrave; javascript).</p>\r\n'),
 (8, 'Quy trình phát triển website bằng ngôn ngữ PHP', 'quy-trinh-phat-trien-website-bang-ngon-ngu-php-1679673346.jpg', 'quy-trinh-phat-trien-website-bang-ngon-ngu-php', 1, 'PHP là một ngôn ngữ lập trình phía Server dùng để xây dựng các ứng dụng Website. Điểm mạnh của PHP là tính cộng đồng của nó cao', '<h2>I. Giới thiệu về PHP</h2>\r\n\r\n<p>A. Lịch sử ph&aacute;t triển</p>\r\n\r\n<p>B. Ưu điểm v&agrave; nhược điểm</p>\r\n\r\n<p>C. C&agrave;i đặt PHP</p>\r\n\r\n<h2>II. C&uacute; ph&aacute;p cơ bản của PHP</h2>\r\n\r\n<p>A. Biến v&agrave; kiểu dữ liệu</p>\r\n\r\n<p>B. C&aacute;c to&aacute;n tử</p>\r\n\r\n<p>C. C&aacute;c c&acirc;u lệnh điều kiện v&agrave; v&ograve;ng lặp</p>\r\n\r\n<h2>III. X&acirc;y dựng website động với PHP</h2>\r\n\r\n<p>A. Cơ bản về HTML v&agrave; CSS</p>\r\n\r\n<p>B. Tạo trang đăng nhập v&agrave; đăng k&yacute;</p>\r\n\r\n<p>C. Quản l&yacute; người d&ugrave;ng</p>\r\n\r\n<p>D. Truy vấn cơ sở dữ liệu</p>\r\n\r\n<p>E. Hiển thị dữ liệu tr&ecirc;n trang web</p>\r\n\r\n<p>F. Tạo trang quản trị</p>\r\n\r\n<h2>IV. C&aacute;c framework PHP phổ biến</h2>\r\n\r\n<p>A. Laravel</p>\r\n\r\n<p>B. CodeIgniter</p>\r\n\r\n<p>C. Symfony</p>\r\n\r\n<p>D. CakePHP</p>\r\n\r\n<h2>V. Bảo mật trong lập tr&igrave;nh web PHP</h2>\r\n\r\n<p>A. Tấn c&ocirc;ng v&agrave; lỗ hổng bảo mật</p>\r\n\r\n<p>B. C&aacute;c phương ph&aacute;p bảo mật cơ bản</p>\r\n\r\n<p>C. X&aacute;c thực người d&ugrave;ng v&agrave; ph&acirc;n quyền</p>\r\n\r\n<h2>VI. Triển khai website PHP</h2>\r\n\r\n<p>A. Lựa chọn m&aacute;y chủ v&agrave; t&ecirc;n miền</p>\r\n\r\n<p>B. C&agrave;i đặt v&agrave; cấu h&igrave;nh web server</p>\r\n\r\n<p>C. Triển khai ứng dụng PHP tr&ecirc;n server</p>\r\n\r\n<h2>VII. T&agrave;i liệu tham khảo v&agrave; học tiếp</h2>\r\n\r\n<p>A. C&aacute;c trang web học PHP trực tuyến</p>\r\n\r\n<p>B. C&aacute;c s&aacute;ch về lập tr&igrave;nh web PHP</p>\r\n\r\n<p>C. C&aacute;c diễn đ&agrave;n v&agrave; cộng đồng lập tr&igrave;nh vi&ecirc;n PHP.</p>\r\n'),
 (9, 'Lỗ hổng bảo mật ngôn ngữ lập trình PHP', 'lo-hong-bao-mat-ngon-ngu-lap-trinh-php.jpg', 'lo-hong-bao-mat-ngon-ngu-lap-trinh-php', 1, 'Thường xuyên cập nhật phiên bản PHP mới nhất và các thư viện của nó để giảm thiểu các lỗ hổng bảo mật có thể xảy ra khi xây dựng website bằng ngôn ngữ PHP', '<h2>Một số lỗ hổng bảo mật trong ng&ocirc;n ngữ PHP</h2>\r\n\r\n<p>Injection Attacks: Lỗ hổng n&agrave;y xảy ra khi attacker c&oacute; thể thực thi m&atilde; PHP trong một ứng dụng web. Injection attacks bao gồm SQL injection, code injection v&agrave; c&aacute;c loại tấn c&ocirc;ng kh&aacute;c.</p>\r\n\r\n<p>Cross-site Scripting (XSS): Lỗ hổng XSS cho ph&eacute;p attacker thực thi m&atilde; JavaScript tr&ecirc;n tr&igrave;nh duyệt của người d&ugrave;ng. Lỗ hổng n&agrave;y thường xảy ra khi người d&ugrave;ng đưa dữ liệu kh&ocirc;ng được kiểm tra v&agrave; xử l&yacute; đ&uacute;ng c&aacute;ch v&agrave;o trang web.</p>\r\n\r\n<p>Cross-site Request Forgery (CSRF): Lỗ hổng n&agrave;y cho ph&eacute;p attacker đưa ra c&aacute;c y&ecirc;u cầu tr&ecirc;n trang web m&agrave; kh&ocirc;ng cần sự cho ph&eacute;p của người d&ugrave;ng. Điều n&agrave;y c&oacute; thể dẫn đến việc thực hiện c&aacute;c h&agrave;nh động kh&ocirc;ng mong muốn.</p>\r\n\r\n<p>File inclusion vulnerabilities: Lỗ hổng n&agrave;y cho ph&eacute;p attacker đưa m&atilde; v&agrave;o một tệp đ&atilde; tồn tại hoặc tạo một tệp mới. Điều n&agrave;y c&oacute; thể dẫn đến việc thực hiện c&aacute;c h&agrave;nh động kh&ocirc;ng mong muốn, bao gồm đọc v&agrave; ghi dữ liệu.</p>\r\n\r\n<p>Session hijacking: Lỗ hổng n&agrave;y cho ph&eacute;p attacker đ&aacute;nh cắp phi&ecirc;n đăng nhập của người d&ugrave;ng v&agrave; sử dụng n&oacute; để truy cập trang web.</p>\r\n\r\n<h2>Để tr&aacute;nh c&aacute;c lỗ hổng bảo mật trong PHP</h2>\r\n\r\n<ul>\r\n	<li>Kiểm tra v&agrave; x&aacute;c thực đầu v&agrave;o, m&atilde; h&oacute;a dữ liệu, kiểm tra quyền truy cập</li>\r\n	<li>Cập nhật phi&ecirc;n bản PHP mới nhất v&agrave; c&aacute;c thư viện sử dụng</li>\r\n</ul>\r\n'),
-(10, 'Tin 1 up', 'tin-1.jpg', 'tin-1', 2, 'dsds', NULL);
+(10, 'Tin 1 update final', 'tin-1.jpg', 'tin-1', 2, 'dsds', NULL);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `import`
---
-ALTER TABLE `import`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `info`
@@ -216,28 +212,22 @@ ALTER TABLE `tin`
 --
 
 --
--- AUTO_INCREMENT for table `import`
---
-ALTER TABLE `import`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `nhom`
 --
 ALTER TABLE `nhom`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `sanpham`
@@ -249,7 +239,7 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT for table `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tin`

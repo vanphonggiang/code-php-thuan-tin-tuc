@@ -22,3 +22,7 @@ Website tin tức bằng code PHP thuần
 [Danh sách thành viên](https://codethuan.com/danh-sach-thanh-vien-va-form-them-moi-thanh-vien)
 
 [Thêm mới và cập nhật thành viên](https://codethuan.com/them-moi-thanh-vien-va-cap-nhat-thanh-vien)
+
+[Hoàn thiện bộ quản trị](https://codethuan.com/hoan-thien-bo-quan-tri-tin-tuc-bang-code-tay-php-thuan)
+
+# code PHP thuần tin tức giao diện

@@ -11,6 +11,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codethuan.com/php</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codethuan.com/html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codethuan.com/css</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codethuan.com/jquery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codethuan.com/gioi-thieu-code-thuan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

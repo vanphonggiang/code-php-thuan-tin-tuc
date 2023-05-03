@@ -1,0 +1,3 @@
+<?php
+	$tit = "Thông tin";
+?>

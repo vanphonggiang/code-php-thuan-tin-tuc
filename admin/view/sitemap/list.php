@@ -30,8 +30,22 @@
 		$priority=$xml->createElement("priority", "0.8");
 		$url->appendChild($priority);
 
+		// Menu
+		$dataMenu = $query->DanhSach("menu", ["slug"]);
+		foreach ($dataMenu as $key => $value) 
+		{
+			$url=$xml->createElement("url");
+			$urlset->appendChild($url);	
+			$loc=$xml->createElement("loc", "https://codethuan.com/".$value->slug);
+			$url->appendChild($loc);	
+			$changefreq=$xml->createElement("changefreq", "weekly");
+			$url->appendChild($changefreq);	
+			$priority=$xml->createElement("priority", "0.8");
+			$url->appendChild($priority);
+		}
+
 		// Tin
-		$dataTin = $query->DanhSach("tin", ["id", "slug"]);
+		$dataTin = $query->DanhSach("tin", ["slug"]);
 		foreach ($dataTin as $key => $value) 
 		{
 			$url=$xml->createElement("url");

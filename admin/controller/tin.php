@@ -23,6 +23,7 @@ class Tin {
 		$des = $_POST['des'];
 		$menu = $_POST['menu'];
 		$query->ThemMoi("tin", ["ten", "slug", "des", "hinh", "menu"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "menu" => $menu]);
+		$this->Info($query);
 		header("location:./");
 	}
 
@@ -45,6 +46,7 @@ class Tin {
 		$des = $_POST['des'];
 		$menu = $_POST['menu'];
 		$query->CapNhat("tin", ["ten", "slug", "des", "hinh", "menu"], ["id"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "id" => $id, "menu" => $menu]);
+		$this->Info($query);
 		header("location:../tin?page=".$pageCurrent);
 	}
 
@@ -58,7 +60,14 @@ class Tin {
 	{
 		$pageCurrent = $lib->pageAddress();
 		$truyvan->Xoa("tin", ["id" => "="], ["id" => $id]);
+		$this->Info($truyvan);
 		header("location:../tin?page=".$pageCurrent);
+	}
+
+	public function Info($truyvan)
+	{
+		$data = $truyvan->DanhSach("tin", ["slug", "hinh", "ten", "des"], [], ["id" => "DESC"]);
+		$truyvan->CapNhat("info", ["tin"], ["id"], ["id" => 1, "tin" => json_encode($data)]);
 	}
 }
 $tin = new Tin();
