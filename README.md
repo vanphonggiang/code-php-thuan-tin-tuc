@@ -1,5 +1,5 @@
 # code PHP thuần tin tức
-Website tin tức bằng code PHP thuần
+Quản trị website tin tức bằng code PHP thuần
 
 [Code Thuần](https://codethuan.com)
 
@@ -26,3 +26,6 @@ Website tin tức bằng code PHP thuần
 [Hoàn thiện bộ quản trị](https://codethuan.com/hoan-thien-bo-quan-tri-tin-tuc-bang-code-tay-php-thuan)
 
 # code PHP thuần tin tức giao diện
+Giao diện website tin tức code PHP thuần
+
+[Tạo menu dynamic từ database](https://codethuan.com/menu-dynamic-from-database)

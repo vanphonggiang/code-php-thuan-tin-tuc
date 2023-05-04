@@ -1,6 +1,6 @@
 	
 	<footer>
-		<h1>Footer</h1>
+		<p>&copy; 2023 by <a href="https://codethuan.com">codethuan.com</a></p>
 	</footer>
 
 	<section class="popup"></section>

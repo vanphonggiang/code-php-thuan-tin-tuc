@@ -1,8 +1,11 @@
 
 	<nav>
 		<ul>
-			<li><a href="">menu1</a></li>
-			<li><a href="">menu2</a></li>
+			<?php 
+			foreach ($arrMenu as $keyM => $valueM) {
+				echo '<li><a href="'.$valueM->slug.'">'.$valueM->ten.'</a></li>';
+			}
+			?>
 
 		</ul>
 	</nav>

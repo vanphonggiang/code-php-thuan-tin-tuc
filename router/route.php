@@ -28,13 +28,8 @@
 	require_once "admin/model/Query.php";
 	$query = new Query();
 	$dataInfo = $query->ChiTiet("info", [], ["id" => "="], ["id" => 1]);
-
 	$arrMenu = json_decode($dataInfo->menu);
-	echo "<pre>";
-	print_r($arrMenu);
-	echo "</pre>";
 	
-	$arrLoai = json_encode('[]');
 	if($p == ''){
 		$folder = 'home';
 		require_once "controller/".$folder."/list.php";
@@ -59,13 +54,12 @@
 		else{
 			if(isset($arrMenu->$p))
 			{
-				$folder = 'cate';
+				$folder = 'loai-tin';
 				if($one == ''){
 					require_once 'controller/'.$folder.'/list.php';
 					$path = 'view/'.$folder.'/list.php';
 				}
 				else{
-					$folder = "cate";
 					$child_str = explode("?", $one);
 					if(count($child_str)!=1){
 						$one = $child_str[0];
