@@ -50,7 +50,8 @@
 			<input type="hidden" name="base64Image" value=""/>
 
 			<div class="clear"></div>
-
+			<textarea class="ckeditor" name="noidung"></textarea>
+			
 			<p class="tit"></p>
 			<input type="submit" name="add" value="Add" />
 		</form>

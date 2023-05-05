@@ -22,7 +22,8 @@ class Tin {
 		$slug = $_POST['slug'];
 		$des = $_POST['des'];
 		$menu = $_POST['menu'];
-		$query->ThemMoi("tin", ["ten", "slug", "des", "hinh", "menu"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "menu" => $menu]);
+		$noidung = $_POST['noidung'];
+		$query->ThemMoi("tin", ["ten", "slug", "des", "hinh", "menu", "noidung"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "menu" => $menu, "noidung" => $noidung]);
 		$this->Info($query);
 		header("location:./");
 	}
@@ -45,7 +46,8 @@ class Tin {
 		$slug = $_POST['slug'];
 		$des = $_POST['des'];
 		$menu = $_POST['menu'];
-		$query->CapNhat("tin", ["ten", "slug", "des", "hinh", "menu"], ["id"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "id" => $id, "menu" => $menu]);
+		$noidung = $_POST['noidung'];
+		$query->CapNhat("tin", ["ten", "slug", "des", "hinh", "menu", "noidung"], ["id"], ["ten" => $ten, "slug" => $slug, "des" => $des, "hinh" => $hinh, "id" => $id, "menu" => $menu, "noidung" => $noidung]);
 		$this->Info($query);
 		header("location:../tin?page=".$pageCurrent);
 	}

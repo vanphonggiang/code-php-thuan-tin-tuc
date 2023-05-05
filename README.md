@@ -29,3 +29,5 @@ Quản trị website tin tức bằng code PHP thuần
 Giao diện website tin tức code PHP thuần
 
 [Tạo menu dynamic từ database](https://codethuan.com/menu-dynamic-from-database)
+
+[Hiển thị tin tức trang chủ và loại tin](https://codethuan.com/hien-thi-tin-trang-chu-va-trang-loai-tin)

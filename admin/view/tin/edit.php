@@ -68,6 +68,8 @@
 			</div>
 			<div class="clear"></div>
 
+			<textarea class="ckeditor" name="noidung"><?=$data->noidung?></textarea>
+
 			<p class="tit"></p>
 			<input type="submit" name="add" value="Edit" />
 		</form>

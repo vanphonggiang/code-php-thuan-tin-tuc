@@ -1,6 +1,7 @@
 <?php
-	$tit = "Title home";
-	$key = "Keyword";
-	$des = "Description";
+	$tit = $dataInfo->title;
+	$key = $dataInfo->title;
+	$des = $dataInfo->des;
 	$thumbs = $ROOT.'uploads/info.jpg';
+	$dataTin = json_decode($dataInfo->tin);
 ?>
