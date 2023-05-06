@@ -1,12 +1,4 @@
-$do:#eb2f06;
-$vien:#999;
-$nen:#F6F7FB;
-$xanh:#4a69bd;
-$xanhduong:#4b7bec;
-$vanban:17px;
-$den:#000;
-$trang:#FFF;
-@import 'highlight';
+@import 'color';
 @media all and (min-width: 0){
 	*{
 		margin: 0;
@@ -15,6 +7,61 @@ $trang:#FFF;
 	body{
 		font-family: Arial;
 		background-color: $nen;
+	}
+
+	// Header
+	header{
+		border-bottom: 1px solid $vien;
+		background-color: $trang;
+		padding: 10px 15px 15px 15px;
+		img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	// Nav
+	nav{
+		border-bottom: 1px solid $vien;
+		background-color: $trang;
+		ul{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			height: 50px;
+			align-items: center;
+			list-style: none;
+			li{
+				margin: 0 5px;
+				a{
+					text-decoration: none;
+					color: $den;
+					&:hover{
+						color: $xanhduong;
+					}
+				}
+			}
+		}
+	}
+
+	// Footer
+	footer{
+		background-color: #111;
+		p{
+			color: $trang;
+			text-align: center;
+			font-size: 16px;
+			padding: 10px 0;
+			a{
+				text-decoration: none;
+				font-weight: bold;
+				color: $xanhduong;
+				&:hover{
+					color: $xanh;
+				}
+			}
+		}
 	}
 
 	// Popup
@@ -101,7 +148,11 @@ $trang:#FFF;
 		}
 	}
 }
-@media all and (min-width: 721px){
+@media all and (min-width: 521px){
+	body{
+		width: 520px;
+		margin: auto;
+	}
 	// Menu top
 	.menu-top{
 		ul{
@@ -120,5 +171,10 @@ $trang:#FFF;
 				}
 			}
 		}
+	}
+}
+@media all and (min-width: 1201px){
+	body{
+		width: 720px;
 	}
 }

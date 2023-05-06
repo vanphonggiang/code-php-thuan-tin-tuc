@@ -31,6 +31,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codethuan.com/android</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codethuan.com/gioi-thieu-code-thuan</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -77,6 +82,11 @@
   </url>
   <url>
     <loc>https://codethuan.com/tin-1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codethuan.com/he-dieu-hanh-moi-android</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

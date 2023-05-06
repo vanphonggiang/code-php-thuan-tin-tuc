@@ -1,4 +1,5 @@
-
+	
+	<link rel="stylesheet" type="text/css" href="public/css/home.css?v=<?=time()?>" />
 	<main>
 		<h1>Code Thuần PHP</h1>
 		<ul>
@@ -7,7 +8,7 @@
 				{
 				?>
 					<li>
-						<img src="uploads/tin/<?=$value->hinh?>" alt="<?=$value->ten?>" />
+						<a href="<?=$value->slug?>"><img class="lazy" src="uploads/news.svg" data-src="uploads/tin/<?=$value->hinh?>" alt="<?=$value->ten?>" width="500" height="282" /></a>
 						<h2><a href="<?=$value->slug?>"><?=$value->ten?></a></h2>
 						<p><?=$value->des?></p>
 					</li>

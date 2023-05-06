@@ -1,0 +1,56 @@
+@import 'color';
+@media all and (min-width: 0){
+	main{
+		padding: 10px 15px 0 15px;
+		margin-bottom: 10px;
+		h1{
+			width: calc(100% - 20px);
+			margin: auto;
+			background-color: $trang;
+			padding: 10px;
+		}
+		ul{
+			background-color: $trang;
+			list-style: none;
+			li{
+				padding: 0 10px 10px 10px;
+				margin-bottom: 15px;
+				border-bottom: 0.5px solid $vien;
+				&:last-child{
+					margin-bottom: 0;
+					border-bottom: none;
+				}
+				img{
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+				h2{
+					line-height: 0.8;
+					overflow: hidden;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+					height: 42px;
+					padding: 8px 0 0 0;
+					a{
+						text-decoration: none;
+						font-size: 18px;
+						line-height: 0.9;
+						color: $den;
+					}
+				}
+				p{
+					padding: 10px 0 0 0;
+				}
+			}
+		}
+	}
+}
+@media all and (min-width: 521px)
+{
+	main{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

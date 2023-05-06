@@ -3,7 +3,7 @@ $tit = "Tin tức";
 class Tin {
 	public function DanhSach($truyvan)
 	{
-		$data = $truyvan->DanhSach("tin", ["id", "ten"], [], ["id" => "DESC"]);
+		$data = $truyvan->DanhSach("tin", ["id", "ten", "hinh"], [], ["id" => "DESC"]);
 		return $data;
 	}
 

@@ -26,6 +26,7 @@ require_once "router/route.php";
 	<link rel="preload" as="image" href="uploads/news.svg" />
 	<link rel="shortcut icon" href="favicon.png" type="image/png" />
 	<link rel="canonical" href="<?=$actual_link?>" />
+	<link rel="stylesheet" type="text/css" href="public/css/style.css?v=<?=time()?>" />
 	<script src="public/js/jquery.js"></script>
 </head>
 <body>

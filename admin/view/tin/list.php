@@ -31,6 +31,7 @@
 				<tr>
 					<th width="5%">TT</th>
 					<th>Tên</th>
+					<th>Hình</th>
 					<th colspan="2" width="10%">Chức năng</th>
 				</tr>
 			</thead>
@@ -43,6 +44,7 @@
 				<tr>
 					<td class="giua"><?=$thutu?></td>
 					<td><?=$value->ten?></a></td>
+					<td><img src="../uploads/tin/<?=$value->hinh?>" width="80"/></a></td>
 					<td class="giua"><a href="tin/edit?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fas fa-pencil"></i></a></td>
 					<td class="giua"><a onClick="return confirm('Bạn có chắc chắn muốn xóa ?')" href="tin/del?id=<?=$value->id?>&page=<?=$pageGet?>"><i class="fal fa-trash-alt"></i></a></td>
 				</tr>

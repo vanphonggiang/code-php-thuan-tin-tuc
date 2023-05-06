@@ -1,0 +1,35 @@
+@import 'color';
+@media all and (min-width: 0){
+	article{
+		width: calc(100% - 40px);
+		margin: 10px auto;
+		background-color: $trang;
+		padding: 10px;
+		h1{
+			font-size: 25px;
+			border-bottom: 1px solid $vien;
+			padding: 0 0 10px 0;
+			margin-bottom: 10px;
+		}
+		h2{
+			font-size: 18px;
+			padding-bottom: 5px;
+		}
+		p{
+			font-size: 16px;
+			padding-bottom: 10px;
+		}
+		ul{
+			padding: 0 0 0 17px;
+			li{
+				font-size: 16px;
+			}
+		}
+	}
+}
+@media all and (min-width: 521px)
+{
+	article{
+		width: calc(100% - 20px);
+	}
+}

@@ -44,11 +44,11 @@
 				?>
 			</select>
 
-			<p class="tit">Tên</p>
-			<input type="text" name="ten" placeholder="Tên" autocomplete="off" required value="<?=$data->ten?>" />
+			<p class="tit">Tên <span class="slug">Tên không dấu</span></p>
+			<input class="full" type="text" name="ten" placeholder="Tên" autocomplete="off" required value="<?=$data->ten?>" />
 
-			<p class="tit">Slug <span class="using-name">Sử dụng tên</span></p>
-			<input type="text" name="slug" placeholder="Tên không dấu" autocomplete="off" required value="<?=$data->slug?>" />
+			<p class="tit">Slug</p>
+			<input class="full" type="text" name="slug" placeholder="Tên không dấu" autocomplete="off" required value="<?=$data->slug?>" />
 					
 			<p class="tit">Des</p>
 			<textarea rows="3" name="des" placeholder="Intro" placeholder="Description"><?=$data->des?></textarea>
@@ -73,6 +73,25 @@
 			<p class="tit"></p>
 			<input type="submit" name="add" value="Edit" />
 		</form>
-		<script>$('.cropme').simpleCropper();</script>
+		<script>
+			$('.cropme').simpleCropper();
+			
+			$('input[name="ten"]').keyup(function(){
+				$(".slug").show();
+			});
+			
+			$(".slug").click(function(){
+				let ten = $('input[name="ten"]').val();
+				$.ajax({
+					method: "POST",
+					data: {ten:ten},
+					url: "view/tin/slug.php",
+					success:function(data){
+						$('input[name="slug"]').val(data);
+						$(".slug").hide();
+					}
+				});
+			});
+		</script>
 	</section>
 </main>
