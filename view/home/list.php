@@ -1,5 +1,4 @@
 	
-	<link rel="stylesheet" type="text/css" href="public/css/home.css?v=<?=time()?>" />
 	<main>
 		<h1>Code Thuần PHP</h1>
 		<ul>

@@ -11,7 +11,7 @@
 		$ROOT = "http"."://$_SERVER[HTTP_HOST]/";
 	}
 	$arr_link = explode("/", $actual_link);
-	if($arr_link[2] == 'localhost' || $arr_link[2] == '192.168.1.3'){
+	if($arr_link[2] == 'localhost' || $arr_link[2] == '192.168.1.4'){
 		$__URL__ = $ROOT.$arr_link[3]."/";
 		isset($arr_link[4]) ? $p = $arr_link[4] : $p = '';
 		isset($arr_link[5]) ? $one = $arr_link[5] : $one = '';

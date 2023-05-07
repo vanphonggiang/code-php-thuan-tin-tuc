@@ -33,3 +33,5 @@ Giao diện website tin tức code PHP thuần
 [Hiển thị tin tức trang chủ và loại tin](https://codethuan.com/hien-thi-tin-trang-chu-va-trang-loai-tin)
 
 [CSS Giao diện web tin tức](https://codethuan.com/css-giao-dien-web-tin-tuc-code-thuan-php)
+
+[Tối ưu website](https://codethuan.com/toi-uu-website-tin-tuc-code-php-thuan)
