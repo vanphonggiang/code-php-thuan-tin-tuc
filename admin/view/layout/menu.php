@@ -9,6 +9,7 @@
 				<li class="active"><a href="info">Info</a></li>
 				<li><a href="sitemap">Sitemap</a></li>
 				<li><a href="picture-resize">Resize</a></li>
+				<li><a target="_blank" href="http://localhost/codethuantin/admin/lib/ckfinder/ckfinder.html?type=Files"><i class="fa-regular fa-file"></i> Files</a></li>
 			</ul>
 		</li>
 

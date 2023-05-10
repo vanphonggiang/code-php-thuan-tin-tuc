@@ -25,6 +25,8 @@ Quản trị website tin tức bằng code PHP thuần
 
 [Hoàn thiện bộ quản trị](https://codethuan.com/hoan-thien-bo-quan-tri-tin-tuc-bang-code-tay-php-thuan)
 
+[Quản lý file với CKFinder](https://codethuan.com/quan-ly-file-voi-ckfinder)
+
 # code PHP thuần tin tức giao diện
 Giao diện website tin tức code PHP thuần
 
